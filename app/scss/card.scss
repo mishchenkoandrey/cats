@@ -1,0 +1,41 @@
+.like {
+  width: 46px;
+  height: 41px;
+  background: url(images/sprite.svg#heart);
+  background-size: cover;
+  top: 2.25rem;
+  right: 2rem;
+  opacity: 0.5;
+}
+
+.like + div {
+  left: -100%;
+  transition: all 3s cubic-bezier(0, 1, 1, 0);
+}
+
+.discount {
+  left: 38px;
+  top: 34px;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.125rem;
+}
+
+.checked {
+  opacity: 1;
+}
+
+.checked + div {
+  left: 100%;
+}
+
+.add {
+  display: none;
+}
+
+.checked + div .add {
+  display: block;
+}
+
+.checked + div .remove {
+  display: none;
+}

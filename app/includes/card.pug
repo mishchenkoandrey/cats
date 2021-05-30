@@ -1,0 +1,27 @@
+- const cardSaleFlag = cat.isSale ? "sale" : null
+div.d-flex.fd-column.align-items-stretch.relative.flex-grow-1(class=cardSaleFlag)
+  if cat.discount
+    div.absolute.discount.bg-info.color-light -
+      = cat.discount
+      | %
+  img(src=cat.img alt=cat.name)
+  button.absolute.like(type="button")
+  div.d-flex.fd-column.align-items-stretch.mb-1-875.p-1-875
+    h2= cat.name
+    div.d-flex.mb-1
+      div.fs-0-75.pseudo-border= cat.color
+        span.d-block окрас
+      div
+        div.bold= cat.age 
+          span  мес.
+        div.fs-0-75 Возраст
+      div
+        div.bold= cat.pawsCount 
+        div.fs-0-75 Кол-во лап
+    div.bold.fs-1-5= cat.price 
+      span  руб.
+  - const cardLinkClass = "bold btn border-bottom-radius"
+  if cat.isActive 
+    a.bg-secondary(href="" class=cardLinkClass) Купить
+  else 
+    div.disabled.bg-primary(class=cardLinkClass) Продан

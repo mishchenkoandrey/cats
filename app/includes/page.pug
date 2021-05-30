@@ -1,0 +1,21 @@
+include header.pug
+div.container.ta-center.p-lg-0
+  form.d-flex.justify-content-start.gap-3.mt-2-375.mb-2-375.p-lg-1-875.gap-sm-1.mt-sm-1.mb-sm-1
+    div.bold Сортировать по:
+    div.d-flex.justify-content-start.gap-3-4375.fs-1-125.gap-sm-1
+      label.d-flex.gap-0-5
+        | Цене
+        select.border-0(name="price") 
+          option(label=" " disabled selected)
+          option(label="🠕") 🠕
+          option(label="🠗") 🠗
+      label.d-flex.gap-0-5
+        | Возрасту
+        select.border-0(name="age")
+          option(label=" " disabled selected)
+          option(label="🠕") 🠕
+          option(label="🠗") 🠗
+  div.d-flex.gap-1-25.ta-left.justify-content-center.cats
+  a.btn-more(href="") Показать еще 20
+div.container.p-lg-0
+  include footer.pug

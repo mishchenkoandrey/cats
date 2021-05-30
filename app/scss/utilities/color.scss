@@ -1,0 +1,4 @@
+@each $key, $color in $theme-colors {
+  .color-#{$key} { color: $color; }
+  .bg-#{$key} { background-color: $color; }
+}
